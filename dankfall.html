@@ -1,14 +1,79 @@
+<!-- Dankfall.
+
+Preface: Mirror mirror on the wall, who is the dankest of them all.
+Remake of Spyfall.
+
+Front end created by ez -->
+
 <head>
-  <title>dankfall</title>
+  <meta charset="utf-8">
+  <title>dankfall.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"> 
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  {{> main}}
 
-  {{> hello}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="main">
+  <div class="container">
+    <div class="main-content">
+      {{> Template.dynamic template=whichView}}
+
+      <hr>
+
+      {{> footer }}
+    </div>
+  </div>
 </template>
+
+<template name="landing">
+	<div class ="center-crap vert">
+		<form id="landing-form">
+			<h1>welcome to dankfall</h1>
+			<hr>
+			<br>
+			<button id='join' class="btn btn-default land-btn">join game</button>
+			<button id='create' class="btn btn-default land-btn">create game</button>
+		</form>
+		<br>
+	</div>
+</template>
+
+<template name="create">
+	<div class ="center-crap vert">
+		<form id="landing-form">
+			<h1>welcome to dankfall</h1>
+			<hr>
+			<br>
+			<input type='text' class="form-control" width=10vw placeholder='name'>
+			<br>
+			<button id='' class="btn btn-default land-btn">create game</button>
+			<button id='back' class="btn btn-default land-btn">back</button>
+		</form>
+	</div>
+</template>
+
+<template name="join">
+	<div class ="center-crap vert">
+		<form id="landing-form">
+			<h1>welcome to dankfall</h1>
+			<hr>
+			<br>
+			<input type='text' class="form-control" width=10vw placeholder='group code'>
+			<br>
+			<input type='text' class="form-control" width=10vw placeholder='name'>
+			<br>
+			<button id='' class="btn btn-default land-btn">join game</button>
+			<button id='back' class="btn btn-default land-btn">back</button>
+		</form>
+	</div>
+</template>
+
+<template name="footer">
+	<p class='center-crap'>Made with love in Palo Alto</p>
+</template>
+
