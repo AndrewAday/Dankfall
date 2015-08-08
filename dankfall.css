@@ -1,1 +1,13 @@
 /* CSS declarations go here */
+#landing-form {
+	padding-top:35vh;
+}
+
+.center-crap {
+	text-align: center;
+}
+
+.land-btn{
+	padding-right: 20px;
+	padding-left: 20px;
+}
